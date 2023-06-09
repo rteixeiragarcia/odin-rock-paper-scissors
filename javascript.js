@@ -8,26 +8,45 @@ function getComputerChoice() {
 
 function playRound(player, computer) {
     if (player === "rock" && computer === "rock") {
-        return "It's a draw. Rock against Rock. Try again."
+        return "draw"
     } else if (player === "rock" && computer === "paper") {
-        return "You lose! Paper beats Rock."
+        return "lose"
     } else if (player === "rock" && computer === "scissors") {
-        return "You win! Rock beats Scissors."
+        return "win"
     } else if (player === "paper" && computer === "rock") {
-        return "You win! Paper beats Rock."
+        return "win"
     } else if (player === "paper" && computer === "paper") {
-        return "It's a draw. Paper against Paper. Try again."
+        return "draw"
     } else if (player === "paper" && computer === "scissors") {
-        return "You lose! Scissors beats Paper."
+        return "lose"
     } else if (player === "scissors" && computer === "rock") {
-        return "You lose! Rock beats Scissors."
+        return "lose"
     } else if (player === "scissors" && computer === "paper") {
-        return "You win! Scissors beats Paper."
+        return "win"
     } else if (player === "scissors" && computer === "scissors") {
-        return "It's a draw. Scissors against Scissors. Try again."
+        return "draw"
     }
 }
 
-const choicePlayer = "paper";
-const choiceComputer = getComputerChoice();
-console.log(playRound(choicePlayer, choiceComputer));
+function game() {
+    let scorePlayer = 0;
+    let scoreComputer = 0;
+
+    for (let i = 0; i < 5; i++){
+        let computer = getComputerChoice();
+        let player = prompt("Choose your weapon: ");
+        let playerLower = player.toLowerCase();
+
+        if (playRound(playerLower, computer) === "win") {
+            ++scorePlayer;
+            console.log(`You win! ${playerLower} beats ${computer}. You have ${scorePlayer} win(s). Computer has ${scoreComputer} win(s).`);
+        } else if(playRound(playerLower, computer) === "lose") {
+            ++scoreComputer;
+            console.log(`You lose! ${computer} beats ${playerLower}. You have ${scorePlayer} win(s). Computer has ${scoreComputer} win(s).`);
+        } else if(playRound(playerLower, computer) === "draw") {
+            console.log(`It's a draw! ${playerLower} draws ${computer}. You have ${scorePlayer} win(s). Computer has ${scoreComputer} win(s).`);
+        }
+    }
+}
+
+game();
