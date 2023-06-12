@@ -26,8 +26,9 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 .scoreboard {
@@ -38,6 +39,21 @@
     gap: 100px;
 }
 
+.title-scoreboard-text {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    color: #77BA99;
+    font-family: 'Press Start 2P', cursive;
+}
+
 .player {
     border: 5px solid #262730;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-number {
+    border: 2px solid black;
 }
