@@ -47,14 +47,20 @@
     font-family: 'Press Start 2P', cursive;
 }
 
+<<<<<<< HEAD
 .player, .computer {
     box-shadow: 10px 5px 5px #77BA99;
+=======
+.player {
+    border: 5px solid #262730;
+>>>>>>> 0c37523328e4eea108e4933644314e72cc3ab6a5
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .score-number {
+<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,4 +81,7 @@
 .goal-game h3 {
     font-family: 'Press Start 2P', cursive;
     color: #262730;
+=======
+    border: 2px solid black;
+>>>>>>> 0c37523328e4eea108e4933644314e72cc3ab6a5
 }
