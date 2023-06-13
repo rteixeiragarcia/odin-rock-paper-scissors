@@ -26,8 +26,9 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 .scoreboard {
@@ -38,6 +39,40 @@
     gap: 100px;
 }
 
-.player {
-    border: 5px solid #262730;
+.title-scoreboard-text {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    color: #77BA99;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.player, .computer {
+    box-shadow: 10px 5px 5px #77BA99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-score, .computer-score, .versus {
+    font-size: 48px;
+    font-family: 'Press Start 2P', cursive;
+    color: #77BA99;
+}
+
+.goal-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goal-game h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #262730;
 }
