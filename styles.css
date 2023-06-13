@@ -51,7 +51,14 @@
     gap: 100px;
 }
 
-.player, .computer {
+.player {
+    box-shadow: -10px 5px 5px #EDB88B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.computer {
     box-shadow: 10px 5px 5px #EDB88B;
     display: flex;
     justify-content: center;
