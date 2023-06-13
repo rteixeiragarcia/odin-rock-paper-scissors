@@ -26,25 +26,29 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 50px;
+}
+
+.div-scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+}
+
+.title-scoreboard h2 {
+    color: #77BA99;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .scoreboard {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
     gap: 100px;
-}
-
-.title-scoreboard-text {
-    height: fit-content;
-    width: fit-content;
-    margin: auto;
-    color: #77BA99;
-    font-family: 'Press Start 2P', cursive;
 }
 
 .player, .computer {
@@ -72,7 +76,29 @@
     align-items: center;
 }
 
-.goal-game h3 {
+.goal-game h3, .choose h3 {
     font-family: 'Press Start 2P', cursive;
     color: #262730;
+}
+
+.div-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    gap: 100px;
+}
+
+.weapons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+.rock-btn, .paper-btn, .scissors-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
