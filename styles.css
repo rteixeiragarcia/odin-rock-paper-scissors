@@ -23,7 +23,7 @@
 
 .main {
     background-color: #FAD8D6;
-    height: 85vh;
+    height: 87vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -114,13 +114,13 @@
     margin: 0;
     padding: 0;
     background-color: #2E282A;
-    height: 5vh;
+    height: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer h3 {
+.footer h5 {
     font-family: 'Press Start 2P', cursive;
     color: #FAD8D6;
 }

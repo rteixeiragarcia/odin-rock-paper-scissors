@@ -13,6 +13,12 @@ const scissorsBtn = document.getElementsByClassName("scissors-btn")[0];
 const resultRound = document.getElementsByClassName("result-round")[0];
 const computerBtn = document.getElementsByClassName("computer-btn")[0];
 const compImg = document.createElement("img");
+const restartBtn = document.createElement("button");
+const main = document.getElementsByClassName("main")[0];
+const divGame = document.getElementsByClassName("div-game")[0];
+
+restartBtn.textContent = "New Game";
+restartBtn.style.cssText = "padding: 10px; font-family: 'Press Start 2P', cursive; background-color: #2E282A; color: #FAD8D6;";
 
 let getComputerChoice = () => {
     let options = ["rock", "paper", "scissors"];
@@ -35,13 +41,10 @@ let playRock = () => {
             scissorsBtn.style.cssText = "box-shadow: none";
             paperBtn.style.cssText = "box-shadow: none";
             resultRound.textContent = "It's a tie. Rock ties with Rock.";
-            updateScore("player-score", playerScore);
-            updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/fist.png");
             computerBtn.appendChild(compImg);
             rockBtn.style.cssText = "box-shadow: 0px 0px 30px yellow;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px yellow;"
-            return "tie";
             break;
 
         case "paper":
@@ -49,13 +52,16 @@ let playRock = () => {
             paperBtn.style.cssText = "box-shadow: none";
             resultRound.textContent = "You lose! Paper beats Rock."
             ++computerScore;
-            updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/hand.png");
             computerBtn.appendChild(compImg);
             rockBtn.style.cssText = "box-shadow: 0px 0px 30px red;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px green;"
-            return "lose";
+            if (computerScore === 5) {
+                gameDone();
+                playerScore = 0;
+                computerScore = 0;
+            }
             break;
 
         case "scissors":
@@ -64,12 +70,15 @@ let playRock = () => {
             resultRound.textContent = "You win! Rock beats Scissors."
             ++playerScore;
             updateScore("player-score", playerScore);
-            updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/two.png");
             computerBtn.appendChild(compImg);
             rockBtn.style.cssText = "box-shadow: 0px 0px 30px green;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px red;"
-            return "win";
+            if (playerScore === 5) {
+                gameDone();
+                playerScore = 0;
+                computerScore = 0;
+            }
             break;
     }
 }
@@ -84,25 +93,25 @@ let playPaper = () => {
             resultRound.textContent = "You win! Paper beats Rock.";
             ++playerScore;
             updateScore("player-score", playerScore);
-            updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/fist.png");
             computerBtn.appendChild(compImg);
             paperBtn.style.cssText = "box-shadow: 0px 0px 30px green;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px red;"
-            return "win";
+            if (playerScore === 5) {
+                gameDone();
+                playerScore = 0;
+                computerScore = 0;
+            }
             break;
 
         case "paper":
             scissorsBtn.style.cssText = "box-shadow: none";
             rockBtn.style.cssText = "box-shadow: none";
             resultRound.textContent = "It's a tie. Paper ties with Paper.";
-            updateScore("player-score", playerScore);
-            updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/hand.png");
             computerBtn.appendChild(compImg);
             paperBtn.style.cssText = "box-shadow: 0px 0px 30px yellow;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px yellow;"
-            return "tie";
             break;
 
         case "scissors":
@@ -110,13 +119,16 @@ let playPaper = () => {
             rockBtn.style.cssText = "box-shadow: none";
             resultRound.textContent = "You lose! Scissors beats Paper.";
             ++computerScore;
-            updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/two.png");
             computerBtn.appendChild(compImg);
             paperBtn.style.cssText = "box-shadow: 0px 0px 30px red;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px green;"
-            return "lose";
+            if (computerScore === 5) {
+                gameDone();
+                playerScore = 0;
+                computerScore = 0;
+            }
             break;
     }
 }
@@ -130,13 +142,16 @@ let playScissors = () => {
             rockBtn.style.cssText = "box-shadow: none";
             resultRound.textContent = "You lose! Rock beats Scissors";
             ++computerScore;
-            updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/fist.png");
             computerBtn.appendChild(compImg);
             scissorsBtn.style.cssText = "box-shadow: 0px 0px 30px red;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px green;"
-            return "lose";
+            if (computerScore === 5) {
+                gameDone();
+                playerScore = 0;
+                computerScore = 0;
+            }
             break;
 
         case "paper":
@@ -145,33 +160,46 @@ let playScissors = () => {
             resultRound.textContent = "You win! Scissors beats Paper";
             ++playerScore;
             updateScore("player-score", playerScore);
-            updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/hand.png");
             computerBtn.appendChild(compImg);
             scissorsBtn.style.cssText = "box-shadow: 0px 0px 30px green;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px red;"
-            return "win";
+            if (playerScore === 5) {
+                gameDone();
+                playerScore = 0;
+                computerScore = 0;
+            }
             break;
 
         case "scissors":
             paperBtn.style.cssText = "box-shadow: none";
             rockBtn.style.cssText = "box-shadow: none";
             resultRound.textContent = "It's a tie. Scissors ties with Scissors.";
-            updateScore("player-score", playerScore);
-            updateScore("computer-score", computerScore);
             compImg.setAttribute("src", "images/two.png");
             computerBtn.appendChild(compImg);
             scissorsBtn.style.cssText = "box-shadow: 0px 0px 30px yellow;";
             computerBtn.style.cssText = "box-shadow: 0px 0px 30px yellow;"
-            return "tie";
             break;
     }
 }
 
-let round = () => {
-    rockBtn.addEventListener("click", playRock);
-    paperBtn.addEventListener("click", playPaper);
-    scissorsBtn.addEventListener("click", playScissors);
+rockBtn.addEventListener("click", playRock);
+paperBtn.addEventListener("click", playPaper);
+scissorsBtn.addEventListener("click", playScissors);
+restartBtn.addEventListener("click", restartGame);
+
+function gameDone() {
+    divGame.remove();
+    main.appendChild(restartBtn);
 }
 
-round();
+function restartGame() {
+    restartBtn.remove();
+    main.appendChild(divGame);
+
+    const textPlayerScore = document.getElementsByClassName("player-score")[0];
+    textPlayerScore.textContent = `${playerScore}`;
+
+    const textComputerScore = document.getElementsByClassName("computer-score")[0];
+    textComputerScore.textContent = `${computerScore}`;
+}
