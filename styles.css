@@ -7,7 +7,7 @@
 .header {
     margin: 0;
     padding: 0;
-    background-color: #262730;
+    background-color: #2E282A;
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -17,12 +17,12 @@
     height: fit-content;
     width: fit-content;
     margin: auto;
-    color: #EFF0D1;
+    color: #FAD8D6;
     font-family: 'Press Start 2P', cursive;
 }
 
 .main {
-    background-color: #D7C0D0;
+    background-color: #FAD8D6;
     height: 85vh;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
 }
 
 .title-scoreboard h2 {
-    color: #77BA99;
+    color: #EDB88B;
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .player, .computer {
-    box-shadow: 10px 5px 5px #77BA99;
+    box-shadow: 10px 5px 5px #EDB88B;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +67,7 @@
 .player-score, .computer-score, .versus {
     font-size: 48px;
     font-family: 'Press Start 2P', cursive;
-    color: #77BA99;
+    color: #EDB88B;
 }
 
 .goal-game {
@@ -78,7 +78,7 @@
 
 .goal-game h3, .choose h3 {
     font-family: 'Press Start 2P', cursive;
-    color: #262730;
+    color: #2E282A;
 }
 
 .div-game {
@@ -97,7 +97,7 @@
     gap: 200px;
 }
 
-.rock-btn, .paper-btn, .scissors-btn {
+.rock-btn, .paper-btn, .scissors-btn, .computer-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -106,7 +106,7 @@
 .footer {
     margin: 0;
     padding: 0;
-    background-color: #262730;
+    background-color: #2E282A;
     height: 5vh;
     display: flex;
     justify-content: center;
@@ -115,5 +115,5 @@
 
 .footer h3 {
     font-family: 'Press Start 2P', cursive;
-    color: #D7C0D0;
+    color: #FAD8D6;
 }
