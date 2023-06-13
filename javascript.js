@@ -11,6 +11,8 @@ const rockBtn = document.getElementsByClassName("rock-btn")[0];
 const paperBtn = document.getElementsByClassName("paper-btn")[0];
 const scissorsBtn = document.getElementsByClassName("scissors-btn")[0];
 const resultRound = document.getElementsByClassName("result-round")[0];
+const computerBtn = document.getElementsByClassName("computer-btn")[0];
+const compImg = document.createElement("img");
 
 let getComputerChoice = () => {
     let options = ["rock", "paper", "scissors"];
@@ -33,6 +35,8 @@ let playRock = () => {
             resultRound.textContent = "It's a tie. Rock ties with Rock.";
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/fist.png");
+            computerBtn.appendChild(compImg);
             return "tie";
             break;
         case "paper":
@@ -40,6 +44,8 @@ let playRock = () => {
             ++computerScore;
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/hand.png");
+            computerBtn.appendChild(compImg);
             return "lose";
             break;
         case "scissors":
@@ -47,6 +53,8 @@ let playRock = () => {
             ++playerScore;
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/two.png");
+            computerBtn.appendChild(compImg);
             return "win";
             break;
     }
@@ -61,12 +69,16 @@ let playPaper = () => {
             ++playerScore;
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/fist.png");
+            computerBtn.appendChild(compImg);
             return "win";
             break;
         case "paper":
             resultRound.textContent = "It's a tie. Paper ties with Paper.";
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/hand.png");
+            computerBtn.appendChild(compImg);
             return "tie";
             break;
         case "scissors":
@@ -74,6 +86,8 @@ let playPaper = () => {
             ++computerScore;
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/two.png");
+            computerBtn.appendChild(compImg);
             return "lose";
             break;
     }
@@ -88,6 +102,8 @@ let playScissors = () => {
             ++computerScore;
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/fist.png");
+            computerBtn.appendChild(compImg);
             return "lose";
             break;
         case "paper":
@@ -95,12 +111,16 @@ let playScissors = () => {
             ++playerScore;
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/hand.png");
+            computerBtn.appendChild(compImg);
             return "win";
             break;
         case "scissors":
             resultRound.textContent = "It's a tie. Scissors ties with Scissors.";
             updateScore("player-score", playerScore);
             updateScore("computer-score", computerScore);
+            compImg.setAttribute("src", "images/two.png");
+            computerBtn.appendChild(compImg);
             return "tie";
             break;
     }
