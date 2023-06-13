@@ -1,6 +1,12 @@
 let playerScore = 0;
 let computerScore = 0;
 
+const textPlayerScore = document.querySelector(".player-score");
+textPlayerScore.textContent = `${playerScore}`;
+
+const textComputerScore = document.querySelector(".computer-score");
+textComputerScore.textContent = `${computerScore}`;
+
 function getComputerChoice() {
     let options = ["rock", "paper", "scissors"];
 
@@ -9,8 +15,7 @@ function getComputerChoice() {
     return options[optionRandom];
 }
 
-const textPlayerScore = document.querySelector(".player-score");
-textPlayerScore.textContent = `${playerScore}`;
-
-const textComputerScore = document.querySelector(".computer-score");
-textComputerScore.textContent = `${computerScore}`;
+function updateScore(classPlayer, score) {
+    const textScore = document.querySelector(classPlayer);
+    textScore.textContent = `${score}`;
+}
