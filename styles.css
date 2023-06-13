@@ -23,7 +23,7 @@
 
 .main {
     background-color: #D7C0D0;
-    height: 80vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -86,8 +86,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
-    gap: 100px;
+    height: 50vh;
+    gap: 20px;
 }
 
 .weapons {
@@ -101,4 +101,19 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.footer {
+    margin: 0;
+    padding: 0;
+    background-color: #262730;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #D7C0D0;
 }
