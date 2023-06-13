@@ -20,7 +20,7 @@
     color: #FAD8D6;
     font-family: 'Press Start 2P', cursive;
 }
-
+font-family: 'Press Start 2P', cursive;
 .main {
     background-color: #FAD8D6;
     height: 87vh;
@@ -111,7 +111,7 @@
 }
 
 .footer {
-    margin: 0;
+    margin-top: 10px;
     padding: 0;
     background-color: #2E282A;
     height: 3vh;
